@@ -11,6 +11,9 @@ import { addOne, applyNumber } from './actions/index'
 function App() {
 
   const [state, dispatch] = useReducer(reducer, initialState);
+  const handleChanges = (num) => {
+    dispatch(applyNumber(num))
+  }
 
   return (
     <div className="App">
@@ -35,21 +38,21 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={1} onClick={()=> {dispatch(addOne())}}/>
-              <CalcButton value={2}/>
-              <CalcButton value={3}/>
+              <CalcButton value={1} onClick={()=> {handleChanges(1)}}/>
+              <CalcButton value={2} onClick={()=> {handleChanges(2)}}/>
+              <CalcButton value={3} onClick={()=> {handleChanges(3)}}/>
             </div>
 
             <div className="row">
-              <CalcButton value={4}/>
-              <CalcButton value={5}/>
-              <CalcButton value={6}/>
+              <CalcButton value={4} onClick={()=> {handleChanges(4)}}/>
+              <CalcButton value={5} onClick={()=> {handleChanges(5)}}/>
+              <CalcButton value={6} onClick={()=> {handleChanges(6)}}/>
             </div>
 
             <div className="row">
-              <CalcButton value={7}/>
-              <CalcButton value={8}/>
-              <CalcButton value={9}/>
+              <CalcButton value={7} onClick={()=> {handleChanges(7)}}/>
+              <CalcButton value={8} onClick={()=> {handleChanges(8)}}/>
+              <CalcButton value={9} onClick={()=> {handleChanges(9)}}/>
             </div>
 
             <div className="row">
